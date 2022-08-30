@@ -14,7 +14,7 @@ export class PokemonController {
   constructor(private readonly pokemonService: PokemonService) {}
 
   @Post()
-  findPokemonPost(@Body() body: any) {
+  findPokemonPost(@Body() body: any): Promise<any> {
     return this.pokemonService.findOneByPost(body);
   }
 
